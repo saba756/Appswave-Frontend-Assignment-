@@ -1,38 +1,156 @@
 .App {
-  text-align: center;
-}
+  width: 75%;
+  padding-right: 24px;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-width: 100%;
+
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.test{
+  min-width: 25%;
+
+}
+.text{
+  font-weight: bold;
+}
+.breadcrumb{
+  font-weight: 600;
+  color: #195CCD; ;
+}
+/* .header-box{
+  display: flex
+} */
+.rateButton{
+
+color: #009378;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 28px;
+text-align: center;
+border: 1px solid #009378;
+border-radius: 10px;
+background-color: #FFFFFF;
+padding: 6px 64px;
+}
+.MuiButtonBase-root.MuiButton-root.MuiButton-contained{
+  margin-top: 23px;
+  color: #ffff;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  background: #009378;
+  border-radius: 10px;
+  padding: 6px 64px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-wrapper{
+  display: flex;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stepper {
+  margin-top: 29px;
+}
+
+.categoryheading {
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 40px;
+  color: #233f4d;
+}
+
+.categorybody {
+  color: #3b5e71;
+  font-style: normal;
+}
+
+.categorybody.css-ahj2mt-MuiTypography-root {
+  font-family: "Source Sans Pro";
+  margin-bottom: 8px;
+  margin-left: 3px;
+
+}
+
+.radioDescription {
+  font-style: normal;
+  color: #233f4d;
+  padding-left: 10px;
+
+}
+
+.radioDescription.css-ahj2mt-MuiTypography-root {
+  font-family: "Source Sans Pro";
+  margin-top: -6px;
+
+}
+
+.MuiTypography-root.MuiTypography-body1.MuiFormControlLabel-label.css-ahj2mt-MuiTypography-root{
+line-height: 18px;
+}
+
+.MuiFormControlLabel-label.css-ahj2mt-MuiTypography-root {
+  font-size: 19px;
+  color: #162d39;
+}
+
+.textField{
+  background: #F7F7F7;;
+}
+
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase{
+  height: 36px;
+}
+.textFieldInput{
+  position: relative;
+
+}
+.info-icon{
+  position: absolute;
+  top: -21px;
+  left: 309px;
+}
+.input-text{
+  width:330px;
+  height: 36px;
+  background: #F7F7F7;
+  box-shadow: 0px 4px 16px rgba(6, 26, 35, 0.1);
+border-radius: 8px;
+}
+input[type="text"]{
+  border: none;
+  border-color: transparent;
+}
+.cr-number{
+  margin-top: 12px;
+}
+.border-line{
+  width:330px;
+  height: 36px;
+  border-top: 2px solid #577485
+}
+.text-label{
+  
+}
+.label{
+  width:330px;
+  height: 36px;
+  border-top: 1px solid #577485
+}
+.input-label{
+margin-left: 11px;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 28px;
+color: #577485;
 }
