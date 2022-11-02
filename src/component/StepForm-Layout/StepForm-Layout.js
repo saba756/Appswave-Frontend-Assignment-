@@ -30,9 +30,7 @@ export const StepLayout = function (props) {
         <Typography sx={{ width: "33%", flexShrink: 0 }}>
           {props.heading}
         </Typography>
-        {/* <Typography sx={{ color: "text.secondary" }}>
-            I am an accordion
-          </Typography> */}
+
       </AccordionSummary>
       <AccordionDetails>{props.children}</AccordionDetails>
     </Accordion>

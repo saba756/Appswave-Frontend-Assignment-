@@ -7,6 +7,14 @@ function RequiredDocuments(props)  {
     props.ChangeSteps({
       from: "panel8",
       to: "panel9",
+      currentPanel: "panel7",
+    });
+  }
+  const previousButton =(event)=>{
+    event.preventDefault();
+    props.ChangeSteps({
+      from: "panel7",
+      to: "panel8",
     });
   }
   return (
@@ -28,7 +36,7 @@ function RequiredDocuments(props)  {
               Next
             </Button>
             <div className="previous">
-            <button className="previous-btn">  Previous</button>
+            <button className="previous-btn" type="button"    onClick={previousButton}>  Previous</button>
             </div>
           
       </div>

@@ -23,6 +23,7 @@ function CompanyInformation(props)  {
     props.ChangeSteps({
       from: "panel3",
       to: "panel4",
+      currentPanel: "panel2",
     });
   }
   const previousButton =(event)=>{
@@ -105,22 +106,20 @@ function CompanyInformation(props)  {
         <Typography variant="h4" component="h4" sx={{fontWeight:700,fontSize:16}}>Commercial License Number *</Typography>
       </div>
       <div className="textFieldInput">
-        <input type="text" placeholder="Write something"  className="input-text"/>
+        <input type="text" placeholder="Write something"  className="input-text" required/>
       </div>
      
       <Card sx={{ minWidth: 275 , marginTop:5}}>
         <CardContent>
           <div>
-
           <div className="cr-license">
             <Typography variant="h4" component="h4" sx={{fontWeight:700,fontSize:16}}>Commercial License Issue date</Typography>
-        
                 <Typography variant="h4" component="h4" sx={{fontWeight:700,fontSize:16}}>Commercial License Expiry date</Typography>
                 </div>
 
                 <div className="cr-input">     
-     `    <          div className="label margin" >
-                              <label type="text"  className="input-label">Write Something</label>
+        <div className="label margin" >
+                              <label type="text"  className="input-label" >Write Something</label>
                                  </div>
           <div className="label" >
             <label type="text"  className="input-label">Write Something</label>
@@ -134,13 +133,12 @@ function CompanyInformation(props)  {
       <Typography variant="h4" component="h4" sx={{fontWeight:700,fontSize:16}}>National Waste Center License Number *</Typography>
       </div>
       <div className="textFieldInput">
-        <input type="text" placeholder="Write something"  className="input-text"/>
+        <input type="text" placeholder="Write something"  className="input-text" required/>
       </div>
       <div>
         <div className="license">
         <div className="licenses-date">
             <Typography variant="h4" component="h4" sx={{fontWeight:700,fontSize:16}}>License Issue date *</Typography>
-        
                 <Typography variant="h4" component="h4" sx={{fontWeight:700,fontSize:16}}>License Expiry date *</Typography>
                 </div>
         
@@ -156,11 +154,6 @@ function CompanyInformation(props)  {
                 <TextField
                   name="founded"
                   {...params}
-                  // error={!!errors.founded}
-                  // helperText={
-                  //   errors.founded &&
-                  //   String(messages["addBusiness.form.founderDate"])
-                  // }
                 />
               )}
             />
@@ -177,11 +170,7 @@ function CompanyInformation(props)  {
                 <TextField
                   name="founded"
                   {...params}
-                  // error={!!errors.founded}
-                  // helperText={
-                  //   errors.founded &&
-                  //   String(messages["addBusiness.form.founderDate"])
-                  // }
+                 
                 />
               )}
             />
@@ -248,9 +237,9 @@ function CompanyInformation(props)  {
       <Typography variant="h4" component="h4" sx={{fontWeight:700,fontSize:16, marginTop:0}}>Company image</Typography>
       <Card  sx={{ minWidth: 85 ,marginTop:2 }} className="file-card">
       <label htmlFor="file-upload" className="custom-file-upload">
-      Select file
-</label>
-    <input id="file-upload" type="file"/>
+            Select file
+            </label>
+    <input id="file-upload" type="file"  accept=".png, .jpeg" required/>
       </Card>
       <div className="company-info-btn">
     <Button variant="contained" color="success" className="next" onClick={next} >

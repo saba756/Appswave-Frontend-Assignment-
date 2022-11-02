@@ -18,15 +18,12 @@ export const StepForm = function () {
   const [data, setData] = React.useState({
     from: "panel1",
     to: "panel2",
-    Step1: {},
-    Step2: {},
+
   });
 
   const [steps, setSteps] = React.useState({
-    
     "panel1": false, "panel2": false, "panel3": false,
     "panel4": false, "panel5": false, "panel6": false, "panel7": false, "panel8": false
-  
 })
   
   const handleChange = (step) => (event, isExpanded) => {
@@ -36,8 +33,6 @@ export const StepForm = function () {
   };
 
   const ChangeSteps = function (newData) {
-
-    console.log("neew",newData)
     setData({ ...data, ...newData }); 
     setExpanded(newData.from);
     if(steps[newData.currentPanel] === false){

@@ -7,6 +7,14 @@ function LaborInformation(props)  {
     props.ChangeSteps({
       from: "panel6",
       to: "panel7",
+      currentPanel: "panel5",
+    });
+  }
+  const previousButton =(event)=>{
+    event.preventDefault();
+    props.ChangeSteps({
+      from: "panel4",
+      to: "panel5",
     });
   }
   return (
@@ -28,8 +36,7 @@ function LaborInformation(props)  {
               Next
             </Button>
             <div className="previous">
-            <button className="previous-btn">  Previous</button>
-            </div>
+            <button className="previous-btn" type="button"    onClick={previousButton}>  Previous</button>       </div>
           
       </div>
     </StepLayout>

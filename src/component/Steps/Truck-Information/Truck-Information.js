@@ -7,9 +7,16 @@ function TruckInformation(props)  {
     props.ChangeSteps({
       from: "panel4",
       to: "panel5",
+      currentPanel: "panel3",
     });
   }
-
+  const previousButton =(event)=>{
+    event.preventDefault();
+    props.ChangeSteps({
+      from: "panel2",
+      to: "panel3",
+    });
+  }
   return (
     <StepLayout
       panelNo="panel3"
@@ -29,7 +36,7 @@ function TruckInformation(props)  {
               Next
             </Button>
             <div className="previous">
-            <button className="previous-btn">  Previous</button>
+            <button className="previous-btn" type="button" onClick={previousButton}>  Previous</button>
             </div>
           
       </div>

@@ -7,6 +7,14 @@ function LocationInformation(props)  {
     props.ChangeSteps({
       from: "panel7",
       to: "panel8",
+      currentPanel: "panel6",
+    });
+  }
+  const previousButton =(event)=>{
+    event.preventDefault();
+    props.ChangeSteps({
+      from: "panel5",
+      to: "panel6",
     });
   }
   return (
@@ -29,7 +37,7 @@ function LocationInformation(props)  {
               Next
             </Button>
             <div className="previous">
-            <button className="previous-btn">  Previous</button>
+            <button className="previous-btn" type="button"    onClick={previousButton}>  Previous</button>
             </div>
           
       </div>

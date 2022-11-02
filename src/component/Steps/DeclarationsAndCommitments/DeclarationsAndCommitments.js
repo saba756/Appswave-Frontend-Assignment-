@@ -3,10 +3,12 @@ import { StepLayout } from "../../StepForm-Layout/StepForm-Layout";
 import { Typography } from '@mui/material';
 import Button from "@mui/material/Button";
 function DeclarationsAndCommitments(props)  {
-  const next =() =>{
+
+  const previousButton =(event)=>{
+    event.preventDefault();
     props.ChangeSteps({
-      from: "panel9",
-      to: "panel10",
+      from: "panel7",
+      to: "panel8",
     });
   }
   return (
@@ -28,7 +30,7 @@ function DeclarationsAndCommitments(props)  {
               Next
             </Button> */}
             <div className="previous">
-            <button className="previous-btn">  Previous</button>
+            <button className="previous-btn" type="button"    onClick={previousButton}>  Previous</button>
             </div>
           
       </div>
