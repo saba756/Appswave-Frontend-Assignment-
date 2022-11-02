@@ -16,7 +16,9 @@ import Grid from "@mui/material/Grid";
 import mapImage from "../../../assets/map.png";
 import Information from "../../icon/Information"
 import Button from "@mui/material/Button";
-import Autocomplete from '@mui/material/Autocomplete';
+// import Autocomplete from '@mui/material/Autocomplete';
+// import { Formik, Form, Field } from 'formik';
+// import * as Yup from 'yup';
 function CompanyInformation(props)  {
   const [value, setValue] = React.useState(null);
   const next =() =>{
@@ -26,6 +28,8 @@ function CompanyInformation(props)  {
       currentPanel: "panel2",
     });
   }
+
+
   const previousButton =(event)=>{
     event.preventDefault();
     props.ChangeSteps({
@@ -44,6 +48,7 @@ function CompanyInformation(props)  {
       steps={props.steps}
       num="2"
     >
+    
       <Typography variant="body1"  className="categorybody" sx={{marginLeft:4}}>Please Enter your company information</Typography>
       <div className="cr-number">
         <Typography  variant="h4" component="h4" sx={{fontWeight:700,fontSize:16}}>CR number *</Typography>
@@ -115,7 +120,7 @@ function CompanyInformation(props)  {
                 </div>
 
                 <div className="cr-input">     
-        <div className="label margin" >
+        <div className="label" >
                               <label type="text"  className="input-label" >Write Something</label>
                                  </div>
           <div className="label" >
@@ -130,7 +135,7 @@ function CompanyInformation(props)  {
       <Typography variant="h4" component="h4" sx={{fontWeight:700,fontSize:16}}>National Waste Center License Number *</Typography>
       </div>
       <div className="textFieldInput">
-        <input type="text" placeholder="Write something"  className="input-text" required/>
+        <input type="text" placeholder="Write something" name="licenseNumber"  className="input-text" required/>
       </div>
       <div>
         <div className="license">
@@ -153,6 +158,7 @@ function CompanyInformation(props)  {
                   {...params}
                 />
               )}
+              required
             />
           </LocalizationProvider>
 
@@ -167,7 +173,7 @@ function CompanyInformation(props)  {
                 <TextField
                   name="founded"
                   {...params}
-                 
+                 required
                 />
               )}
             />
@@ -236,18 +242,18 @@ function CompanyInformation(props)  {
       <label htmlFor="file-upload" className="custom-file-upload">
             Select file
             </label>
-    <input id="file-upload" type="file"  accept=".png, .jpeg" required/>
+    <input id="file-upload" type="file"  accept=".png, .jpeg" />
       </Card>
       <div className="company-info-btn">
-    <Button variant="contained" color="success" className="next" onClick={next} >
+    <Button variant="contained" color="success" className="next" type="submit" onClick={next} >
               Next
             </Button>
             <div className="previous">  
-            <button className="previous-btn" type="button"    onClick={previousButton}>  Previous</button>
+            <button className="previous-btn" type="button"    onClick={previousButton}>Previous</button>
             </div>
           
       </div>
-      
+
     </StepLayout>
   );
 };

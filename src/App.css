@@ -270,7 +270,7 @@ margin-left: 5px;
   padding: 8px;
   margin-right: 8px;
   background: #fff;
-  border: 2px solid #666;
+  border: 1px solid #666;
   color: #666;
   text-align: center;
   font: 10px Arial, sans-serif;
@@ -284,8 +284,17 @@ margin-left: 5px;
   margin-right: 8px;
   color: #166EE0;;
   background: #fff;
-  border: 2px solid  #166EE0;;
+  border: 1px solid  #166EE0;;
   text-align: center;
   font: 10px Arial, sans-serif;
   background: #E2F1FF
+}
+
+.success-icon{
+  width: 30px;
+    height: 30px;
+    margin-right: 8px;
+}
+.MuiAccordionSummary-content.css-1betqn-MuiAccordionSummary-content{
+align-items:center;
 }

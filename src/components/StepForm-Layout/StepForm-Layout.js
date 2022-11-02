@@ -17,17 +17,18 @@ export const StepLayout = function (props) {
         expandIcon={<ExpandMoreIcon />}
         aria-controls={props.panelNo + "bh-content"}
         id={props.panelNo + "bh-header"}
+      
       >
                   
                    
                     
                     <div className={props.steps[props.panelNo] ? {} : (props.expanded == props.panelNo ? 'numberActive' : 'numberCircle')}>
                     {
-                      props.steps[props.panelNo] ?                     <SuccessIcon/> : props.num
+                      props.steps[props.panelNo] ?                     <SuccessIcon /> : props.num
                     }
                     </div>
 
-        <Typography sx={{ width: "33%", flexShrink: 0 }}>
+        <Typography sx={{ width: "33%" , flexShrink: 0  }}>
           {props.heading}
         </Typography>
 
