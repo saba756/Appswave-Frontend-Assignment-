@@ -13,8 +13,8 @@ function RequiredDocuments(props)  {
   const previousButton =(event)=>{
     event.preventDefault();
     props.ChangeSteps({
-      from: "panel7",
-      to: "panel8",
+      from: "panel6",
+      to: "panel7",
     });
   }
   return (
