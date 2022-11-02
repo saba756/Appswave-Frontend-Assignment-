@@ -17,19 +17,17 @@ export const StepLayout = function (props) {
         expandIcon={<ExpandMoreIcon />}
         aria-controls={props.panelNo + "bh-content"}
         id={props.panelNo + "bh-header"}
-      
-      >
-                  
-                   
-                    
-                    <div className={props.steps[props.panelNo] ? {} : (props.expanded == props.panelNo ? 'numberActive' : 'numberCircle')}>
-                    {
-                      props.steps[props.panelNo] ?                     <SuccessIcon /> : props.num
-                    }
-                    </div>
 
-        <Typography sx={{ width: "33%" , flexShrink: 0  }}>
-          {props.heading} 
+      >
+
+        <div className={props.steps[props.panelNo] ? {} : (props.expanded == props.panelNo ? 'numberActive' : 'numberCircle')}>
+          {
+            props.steps[props.panelNo] ? <SuccessIcon /> : props.num
+          }
+        </div>
+
+        <Typography sx={{ width: "33%", flexShrink: 0 }} className={props.steps[props.panelNo] ? 'selected-heading' : ''}>
+          {props.heading}
         </Typography>
         <p className="selectedValue">{props.selectedValues}</p>
       </AccordionSummary>

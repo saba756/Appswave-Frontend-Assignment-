@@ -330,3 +330,7 @@ font-size: 16px;
 line-height: 28px;
 margin-left: -182px
 }
+
+.selected-heading{
+  font-weight: 600 !important;
+}
