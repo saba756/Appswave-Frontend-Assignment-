@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography } from "@mui/material";
-import { StepLayout } from "../../StepLayout";
+import { StepLayout } from "../../StepForm-Layout/StepForm-Layout";
 import TextField from "@mui/material/TextField";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";

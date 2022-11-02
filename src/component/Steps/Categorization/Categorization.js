@@ -1,5 +1,5 @@
 import React from "react";
-import { StepLayout } from "../../StepLayout";
+import { StepLayout } from "../../StepForm-Layout/StepForm-Layout";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";

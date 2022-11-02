@@ -1,22 +1,18 @@
 
-
-
-
-
 import * as React from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import Categorization from '../component/Steps/Categorization/Categorization'
-import CompanyInformation from '../component/Steps/Company-Information/CompanyInformation'
-import ContainerInformation from '../component/Steps/Container-Information/ContainerInformation'
-import DeclarationsAndCommitments from '../component/Steps/DeclarationsAndCommitments/DeclarationsAndCommitments'
-import LaborInformation from '../component/Steps/Labor-Information/LaborInformation'
-import LocationInformation from '../component/Steps/Location-Information/Location-Information'
-import TruckInformation from '../component/Steps/Truck-Information/Truck-Information'
-import RequiredDocuments from '../component/Steps/Required-Documents/RequiredDocuments'
+import Categorization from '../Steps/Categorization/Categorization'
+import CompanyInformation from '../Steps/Company-Information/CompanyInformation'
+import ContainerInformation from '../Steps/Container-Information/ContainerInformation'
+import DeclarationsAndCommitments from '../Steps/DeclarationsAndCommitments/DeclarationsAndCommitments'
+import LaborInformation from '../Steps/Labor-Information/LaborInformation'
+import LocationInformation from '../Steps/Location-Information/Location-Information'
+import TruckInformation from '../Steps/Truck-Information/Truck-Information'
+import RequiredDocuments from '../Steps/Required-Documents/RequiredDocuments'
 export const StepForm = function () {
   const [expanded, setExpanded] = React.useState(false);
   const [data, setData] = React.useState({
@@ -35,8 +31,7 @@ export const StepForm = function () {
   };
 
   const ChangeSteps = function (newData) {
-    setData({ ...data, ...newData });
-   
+    setData({ ...data, ...newData }); 
     setExpanded(newData.from);
   };
  

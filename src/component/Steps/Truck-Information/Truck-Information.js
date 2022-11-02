@@ -1,5 +1,5 @@
 import React from "react";
-import { StepLayout } from "../../StepLayout";
+import { StepLayout } from "../../StepForm-Layout/StepForm-Layout";
 import { Typography } from '@mui/material';
 import Button from "@mui/material/Button";
 function TruckInformation(props)  {
