@@ -1,15 +1,20 @@
 import React from "react";
 import { StepLayout } from "../../StepLayout";
 
-export const RequiredDocuments = function (props) {
+function ContainerInformation(props)  {
   return (
     <StepLayout
-      panelNo="panel7"
-      heading="Required documents"
+      panelNo="panel4"
+      heading="Container information"
       handleChange={props.handleChange}
       expanded={props.expanded}
+      ChangeSteps={props.ChangeSteps}
+      data={props.data}
+      num="4"
     >
       Content Here
     </StepLayout>
   );
 };
+
+export default ContainerInformation;

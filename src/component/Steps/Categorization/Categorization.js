@@ -16,19 +16,44 @@ import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import FormGroup from "@mui/material/FormGroup";
 import Checkbox from "@mui/material/Checkbox";
+import { Formik, Field, Form } from 'formik';
+function Categorization(props)  {
 
-export const Categorization = function (props) {
   return (
     <StepLayout
       panelNo="panel1"
       heading="Categorization"
       handleChange={props.handleChange}
       expanded={props.expanded}
+      ChangeSteps={props.ChangeSteps}
+      data={props.data}
+      num="1"
     >
       <Box sx={{ flexGrow: 1 }}>
+
+      <Formik
+      initialValues={{
+       commercialActivities: '',
+       constructionWaste: '',
+       specialMedicalWaste: '',
+       treatedMedicalWaste: '',
+       sewageWater: '',
+       transporterType:''
+      }}
+      onSubmit={async (values) => {
+        props.ChangeSteps({
+          from: "panel2",
+          to: "panel3",
+           category: values,
+        });
+      console.log("values",values)
+        
+      }}
+    >
+      {({ values ,setFieldValue}) => (
+        <Form>
         <Grid container spacing={2}>
           <Grid item xs={6}>
-
             <span className="categoryheading">
               Transporter type
             </span>
@@ -52,10 +77,12 @@ export const Categorization = function (props) {
                             color: '#009378',
                           },
                         }} 
-                        
+                      
                         />}
                       label="Digging Contractor"
                           className="radioLabel"
+                          name="transporterType"
+                          onChange={(event) => setFieldValue("transporterType",event.target.value)}
                     
                     />
                     <Typography variant="body1" className="radioDescription">
@@ -72,7 +99,9 @@ export const Categorization = function (props) {
                         }} 
                       
                           />}
+                          name="transporterType"
                       label="Private Transporter"
+                      onChange={(event) => setFieldValue("transporterType",event.target.value)}
                     />
                     <Typography variant="body1" className="radioDescription">
                       Description will be here for the type.
@@ -88,7 +117,9 @@ export const Categorization = function (props) {
                           lineHeight:11
                           
                         }} 
+                        onChange={(event) => setFieldValue("transporterType",event.target.value)}
                         />}
+                        name="transporterType"
                       label="Construction and commercial waste transportation company"
                      
                     />
@@ -99,15 +130,14 @@ export const Categorization = function (props) {
                 </FormControl>
               </CardContent>
             </Card>
-            {/* <label for="html">HTML</label><br/>
-<input type="radio" id="css" name="fav_language" value="CSS" fieldset id="group1"/> */}
-            <Button variant="contained" color="success" className="next">
+
+            <Button variant="contained" color="success" className="next" type="submit">
               Next
             </Button>
           </Grid>
           <Grid item xs={6}>
           <span className="categoryheading">
-          Waste Type
+               Waste Type
             </span>
            
             <Typography variant="body1"  className="categorybody" >
@@ -124,7 +154,10 @@ export const Categorization = function (props) {
                       },
                     }} />}
                     label="Commercial Activities"
+                    value="commercialActivities"
                     color="success"
+                    name="commercialActivities"
+                    onChange={(event) => setFieldValue("commercialActivities",event.target.value)}
                   />
                   <FormControlLabel
                     control={<Checkbox    sx={{
@@ -134,7 +167,10 @@ export const Categorization = function (props) {
                       },
                     }}  />}
                     label="Construction Waste"
+                    value="constructionWaste"
                     color="success"
+                    name="constructionWaste"
+                    onChange={(event) => setFieldValue("constructionWaste",event.target.value)}
                   />
                   <FormControlLabel
                     control={<Checkbox   sx={{
@@ -144,7 +180,10 @@ export const Categorization = function (props) {
                       },
                     }}  />}
                     label="Special Medical waste"
+                    value="specialMedicalWaste"
                     color="success"
+                    name="specialMedicalWaste"
+                    onChange={(event) => setFieldValue("specialMedicalWaste",event.target.value)}
                   />
                   <FormControlLabel
                     control={<Checkbox   sx={{
@@ -154,7 +193,10 @@ export const Categorization = function (props) {
                       },
                     }}  />}
                     label="Treated medical waste"
+                    value="treatedMedicalWaste"
                     color="success"
+                    name="treatedMedicalWaste"
+                    onChange={(event) => setFieldValue("treatedMedicalWaste",event.target.value)}
                   />
                   <FormControlLabel
                     control={<Checkbox    sx={{
@@ -164,14 +206,22 @@ export const Categorization = function (props) {
                       },
                     }} />}
                     label="Sewage Water"
+                    value="sewageWater"
                     color="success"
+                    name="sewageWater"
+                    onChange={(event) => setFieldValue("sewageWater",event.target.value)}
                   />
                 </FormGroup>
               </CardContent>
             </Card>
           </Grid>
         </Grid>
+
+        </Form>
+      )}
+    </Formik>
       </Box>
     </StepLayout>
   );
 };
+export default Categorization;

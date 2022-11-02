@@ -122,7 +122,7 @@ line-height: 18px;
   height: 36px;
   background: #F7F7F7;
   box-shadow: 0px 4px 16px rgba(6, 26, 35, 0.1);
-border-radius: 8px;
+margin-top: 6px;
 }
 input[type="text"]{
   border: none;
@@ -253,4 +253,36 @@ margin-left: 5px;
   
   border: 1px solid #BECED6;
   border-radius: 4px;
+}
+
+/* Side by side css */
+
+
+.rowC{display:flex; flex-direction:row;}
+
+.numberCircle {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  padding: 8px;
+  margin-right: 8px;
+  background: #fff;
+  border: 2px solid #666;
+  color: #666;
+  text-align: center;
+  font: 10px Arial, sans-serif;
+}
+
+.numberActive {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  padding: 8px;
+  margin-right: 8px;
+  color: #166EE0;;
+  background: #fff;
+  border: 2px solid  #166EE0;;
+  text-align: center;
+  font: 10px Arial, sans-serif;
+  background: #E2F1FF
 }

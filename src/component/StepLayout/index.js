@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export const StepLayout = function (props) {
+  console.log("pp",props)
   return (
     <Accordion
       disableGutters={true}
@@ -17,6 +18,9 @@ export const StepLayout = function (props) {
         aria-controls={props.panelNo + "bh-content"}
         id={props.panelNo + "bh-header"}
       >
+                    {/* <div className="numberCircle">{props.num}</div> */}
+                    <div className={props.expanded == props.panelNo ? 'numberActive' : 'numberCircle'}>{props.num}</div>
+
         <Typography sx={{ width: "33%", flexShrink: 0 }}>
           {props.heading}
         </Typography>

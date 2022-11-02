@@ -1,15 +1,20 @@
 import React from "react";
 import { StepLayout } from "../../StepLayout";
 
-export const TruckInformation = function (props) {
+function LocationInformation(props)  {
   return (
     <StepLayout
-      panelNo="panel3"
-      heading="Truck information"
+      panelNo="panel6"
+      heading="Location information"
       handleChange={props.handleChange}
       expanded={props.expanded}
+      ChangeSteps={props.ChangeSteps}
+      data={props.data}
+      num="6"
     >
+      
       Content Here
     </StepLayout>
   );
 };
+export default LocationInformation;

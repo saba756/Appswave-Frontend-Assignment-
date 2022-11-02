@@ -17,29 +17,31 @@ import mapImage from "../../../assets/map.png";
 import Information from "../../icon/Information"
 import Button from "@mui/material/Button";
 import Autocomplete from '@mui/material/Autocomplete';
-export const CompanyInformation = function (props) {
+function CompanyInformation(props)  {
   const [value, setValue] = React.useState(null);
-  const top100Films = [
-    { title: 'The Shawshank Redemption', year: 1994 },
-    { title: 'The Godfather', year: 1972 },
-    { title: 'The Godfather: Part II', year: 1974 },
-    { title: 'The Dark Knight', year: 2008 },
-    { title: '12 Angry Men', year: 1957 },
-    { title: "Schindler's List", year: 1993 }
-  ]
+  const next =() =>{
+    props.ChangeSteps({
+      from: "panel3",
+      to: "panel4",
+    });
+  }
+
   return (
     <StepLayout
       panelNo="panel2"
       heading="Company information"
       handleChange={props.handleChange}
       expanded={props.expanded}
+      ChangeSteps={props.ChangeSteps}
+      data={props.data}
+      num="2"
     >
       <Typography variant="body1"  className="categorybody" sx={{marginLeft:4}}>Please Enter your company information</Typography>
       <div className="cr-number">
         <Typography  variant="h4" component="h4" sx={{fontWeight:700,fontSize:16}}>CR number *</Typography>
       </div>
       <div className="textFieldInput">
-        <input type="text" placeholder="Write something"  className="input-text"/>
+        <input type="text" placeholder="Write something"  className="input-text" required/>
      <div className="info-icon">
      <Information/>
      </div>
@@ -59,7 +61,6 @@ export const CompanyInformation = function (props) {
   
   
           <div className="tag">
-         
             <span className="tag-element">Ahmed Emad</span>
             <span className="tag-element">Ahmed Emad</span>
             <span className="tag-element">Ahmed Emad</span>
@@ -239,14 +240,13 @@ export const CompanyInformation = function (props) {
       </Grid>
       <Typography variant="h4" component="h4" sx={{fontWeight:700,fontSize:16, marginTop:0}}>Company image</Typography>
       <Card  sx={{ minWidth: 85 ,marginTop:2 }} className="file-card">
-      <label for="file-upload" className="custom-file-upload">
+      <label htmlFor="file-upload" className="custom-file-upload">
       Select file
 </label>
-<input id="file-upload" type="file"/>
-      
+    <input id="file-upload" type="file"/>
       </Card>
       <div className="company-info-btn">
-      <Button variant="contained" color="success" className="next" >
+      <Button variant="contained" color="success" className="next" onClick={next} >
               Next
             </Button>
             <div className="previous">
@@ -258,3 +258,4 @@ export const CompanyInformation = function (props) {
     </StepLayout>
   );
 };
+export default CompanyInformation;
