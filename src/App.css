@@ -22,9 +22,7 @@
   font-weight: 600;
   color: #195CCD; ;
 }
-/* .header-box{
-  display: flex
-} */
+
 .rateButton{
 
 color: #009378;
@@ -144,8 +142,10 @@ input[type="text"]{
 .label{
   width:330px;
   height: 36px;
-  border-top: 1px solid #577485
+  border-top: 1px solid #577485;
+  margin-top: 4px;
 }
+
 .input-label{
 margin-left: 11px;
 font-style: normal;
@@ -153,4 +153,104 @@ font-weight: 400;
 font-size: 16px;
 line-height: 28px;
 color: #577485;
+}
+.cr-issue{
+  display: flex;
+  gap:250px;
+  margin-top:12px;
+}
+.cr-input{
+  display: flex;
+  gap:28px
+}
+.margin{
+  margin-left: -31px;
+}
+.license{
+  margin-top: 12px;
+}
+.cr-license{
+  display: flex;
+  gap:118px
+}
+.licenses-date{
+  display: flex;
+  gap:138px
+}
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  background: #009378;
+border-radius: 10px;
+color: #FFFFFF;
+padding: 0px 24px;
+font-weight: 600;
+font-size: 16px;
+line-height: 28px;
+margin-top: 20px;
+    margin-left: 22px;
+    margin-bottom: 12px
+}
+.company-info-btn{
+  display: flex;
+  gap: 24px;
+  margin-top: 12px;
+}
+.MuiButtonBase-root.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary{
+  border: 1px solid #ccc;
+  display: inline-block;
+  border-radius: 10px;
+color: #FFFFFF;
+padding: 0px 24px;
+font-weight: 600;
+font-size: 16px;
+line-height: 28px;
+}
+.previous-btn{
+  color: #009378;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 28px;
+text-align: center;
+border: 1px solid #009378;
+border-radius: 10px;
+background-color: #FFFFFF;
+padding: 0px 24px;
+}
+.previous{
+  margin-top: 27px;
+}
+.tag-element{
+  display: inline; 
+  width: 100px;
+  height: 100px;
+  padding: 0px 10px;
+  background: #E8ECEF;
+border-radius: 4px;
+font-weight: 400;
+font-size: 15px;
+line-height: 24px;
+color: #3B5E71;
+margin-left: 8px;
+
+}
+.tag{
+  border-top: 1px solid #577485;
+  padding-top:6px
+}
+.label-margin-issue{
+margin-left: 5px;
+}
+.file-card{
+  background: #FAFAFA;
+  /* color/neutral/100 */
+  
+  border: 1px solid #BECED6;
+  border-radius: 4px;
 }

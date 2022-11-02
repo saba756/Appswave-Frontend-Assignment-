@@ -15,8 +15,18 @@ import Checkbox from "@mui/material/Checkbox";
 import Grid from "@mui/material/Grid";
 import mapImage from "../../../assets/map.png";
 import Information from "../../icon/Information"
+import Button from "@mui/material/Button";
+import Autocomplete from '@mui/material/Autocomplete';
 export const CompanyInformation = function (props) {
   const [value, setValue] = React.useState(null);
+  const top100Films = [
+    { title: 'The Shawshank Redemption', year: 1994 },
+    { title: 'The Godfather', year: 1972 },
+    { title: 'The Godfather: Part II', year: 1974 },
+    { title: 'The Dark Knight', year: 2008 },
+    { title: '12 Angry Men', year: 1957 },
+    { title: "Schindler's List", year: 1993 }
+  ]
   return (
     <StepLayout
       panelNo="panel2"
@@ -30,18 +40,12 @@ export const CompanyInformation = function (props) {
       </div>
       <div className="textFieldInput">
         <input type="text" placeholder="Write something"  className="input-text"/>
-     <div class="info-icon">
+     <div className="info-icon">
      <Information/>
      </div>
  
       </div>
-      {/* <TextField
-        hiddenLabel
-        id="outlined-basic"  variant="outlined"
-        placeholder="Write something"
-  
-        // sx={{height: }}
-      /> */}
+      
       <Card sx={{ minWidth: 275, marginTop: 5 }}>
         <CardContent>
           <Typography variant="h4" component="h4" sx={{fontWeight:700,fontSize:16}}>Company name</Typography>
@@ -50,88 +54,109 @@ export const CompanyInformation = function (props) {
         <label type="text"  className="input-label">Nahdi Pharmacy</label>
         </div>
           {/* <Typography>Nahdi Pharmacy</Typography> */}
-          <Typography variant="h4" component="h4" sx={{fontWeight:700,fontSize:16}}>Manager name</Typography>
-          <div>
-            <span>Ahmed Emad</span>
-            <span>Ahmed Emad</span>
-            <span>Ahmed Emad</span>
-            <span>Ahmed Emad</span>
-            <span>Ahmed Emad</span>
-          </div>
-          <Typography>Partner name</Typography>
+          <Typography variant="h4" component="h4" sx={{fontWeight:700,fontSize:16, marginBottom:1}}>Manager name</Typography>
 
-          <div>
-            <span>Ahmed Emad</span>
-            <span>Ahmed Emad</span>
-            <span>Ahmed Emad</span>
-            <span>Ahmed Emad</span>
-            <span>Ahmed Emad</span>
+  
+  
+          <div className="tag">
+         
+            <span className="tag-element">Ahmed Emad</span>
+            <span className="tag-element">Ahmed Emad</span>
+            <span className="tag-element">Ahmed Emad</span>
+            <span className="tag-element">Ahmed Emad</span>
+          </div>
+          <Typography variant="h4" component="h4" sx={{fontWeight:700,fontSize:16 ,marginBottom:1}}>Partner name</Typography>
+
+          <div className="tag">
+          <span className="tag-element">Ahmed Emad</span>
+            <span className="tag-element">Ahmed Emad</span>
+            <span className="tag-element">Ahmed Emad</span>
+            <span className="tag-element">Ahmed Emad</span>
           </div>
           <div>
-            <div>
-              <Typography>CR Issue date</Typography>
-              <TextField
-                id="standard-basic"
-                placeholder="Write Something"
-                variant="standard"
-              />
+            <div className="cr-issue">
+            <Typography variant="h4" component="h4" sx={{fontWeight:700,fontSize:16}}>CR Issue date</Typography>
+        
+                <Typography variant="h4" component="h4" sx={{fontWeight:700,fontSize:16}}>CR Expiry date</Typography>
+                </div>
+                <div className="cr-input">     
+        <div className="label margin-issue" >
+                              <label type="text"  className="input-label">Write Something</label>
+                                 </div>
+          <div className="label" >
+            <label type="text"  className="input-label">Write Something</label>
+              </div>
             </div>
             <div>
-              <Typography>CR Expiry date</Typography>
-              <TextField
-                id="standard-basic"
-                placeholder="Write Something"
-                variant="standard"
-              />
+          
             </div>
           </div>
         </CardContent>
       </Card>
-      <div>
-        <Typography>Commercial License Number *</Typography>
+      <div className="license" >
+        <Typography variant="h4" component="h4" sx={{fontWeight:700,fontSize:16}}>Commercial License Number *</Typography>
       </div>
-      <TextField
-        hiddenLabel
-        id="filled-hidden-label-small"
-        variant="filled"
-        inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
-        placeholder="write numbers"
-      />
-      <Card sx={{ minWidth: 275 }}>
+      <div className="textFieldInput">
+        <input type="text" placeholder="Write something"  className="input-text"/>
+      </div>
+     
+      <Card sx={{ minWidth: 275 , marginTop:5}}>
         <CardContent>
           <div>
-            <div>
-              <Typography>Commercial License Issue date</Typography>
-              <TextField
-                id="standard-basic"
-                placeholder="Write Something"
-                variant="standard"
-              />
+
+          <div className="cr-license">
+            <Typography variant="h4" component="h4" sx={{fontWeight:700,fontSize:16}}>Commercial License Issue date</Typography>
+        
+                <Typography variant="h4" component="h4" sx={{fontWeight:700,fontSize:16}}>Commercial License Expiry date</Typography>
+                </div>
+
+                <div className="cr-input">     
+     `    <          div className="label margin" >
+                              <label type="text"  className="input-label">Write Something</label>
+                                 </div>
+          <div className="label" >
+            <label type="text"  className="input-label">Write Something</label>
+              </div>
             </div>
-            <div>
-              <Typography>Commercial License Expiry date</Typography>
-              <TextField
-                id="standard-basic"
-                placeholder="Write Something"
-                variant="standard"
-              />
-            </div>
+        
           </div>
         </CardContent>
       </Card>
-      <div>
-        <Typography>National Waste Center License Number *</Typography>
+      <div className="license" >
+      <Typography variant="h4" component="h4" sx={{fontWeight:700,fontSize:16}}>National Waste Center License Number *</Typography>
       </div>
-      <TextField
-        hiddenLabel
-        id="filled-hidden-label-small"
-        variant="filled"
-        inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
-        placeholder="write numbers"
-      />
+      <div className="textFieldInput">
+        <input type="text" placeholder="Write something"  className="input-text"/>
+      </div>
       <div>
-        <div>
-          <Typography>License Issue date *</Typography>
+        <div className="license">
+        <div className="licenses-date">
+            <Typography variant="h4" component="h4" sx={{fontWeight:700,fontSize:16}}>License Issue date *</Typography>
+        
+                <Typography variant="h4" component="h4" sx={{fontWeight:700,fontSize:16}}>License Expiry date *</Typography>
+                </div>
+        
+          <div className="cr-input">   
+          <LocalizationProvider dateAdapter={AdapterMoment}>
+            <DatePicker
+              label={"write something"}
+              value={value}
+              onChange={(newValue) => {
+                setValue(newValue);
+              }}
+              renderInput={(params) => (
+                <TextField
+                  name="founded"
+                  {...params}
+                  // error={!!errors.founded}
+                  // helperText={
+                  //   errors.founded &&
+                  //   String(messages["addBusiness.form.founderDate"])
+                  // }
+                />
+              )}
+            />
+          </LocalizationProvider>
 
           <LocalizationProvider dateAdapter={AdapterMoment}>
             <DatePicker
@@ -153,54 +178,54 @@ export const CompanyInformation = function (props) {
               )}
             />
           </LocalizationProvider>
+          </div>
+          
         </div>
-        <div>
-          <Typography>License Expiry date *</Typography>
-          <LocalizationProvider dateAdapter={AdapterMoment}>
-            <DatePicker
-              label={"write something"}
-              value={value}
-              onChange={(newValue) => {
-                setValue(newValue);
-              }}
-              renderInput={(params) => (
-                <TextField
-                  name="founded"
-                  {...params}
-                  // error={!!errors.founded}
-                  // helperText={
-                  //   errors.founded &&
-                  //   String(messages["addBusiness.form.founderDate"])
-                  // }
-                />
-              )}
-            />
-          </LocalizationProvider>
-        </div>
+   
       </div>
-      <Typography>Working area*</Typography>
+      <Typography variant="h4" component="h4" sx={{fontWeight:700,fontSize:16, marginTop:4}}>Working area*</Typography>
       <Grid container spacing={2}>
         <Grid item xs={6}>
           <Card sx={{ minWidth: 275 }}>
             <CardContent>
               <FormGroup>
                 <FormControlLabel
-                  control={<Checkbox defaultChecked />}
+                  control={<Checkbox defaultChecked   sx={{
+                    color: '#3B5E71',
+                    '&.Mui-checked': {
+                      color: '#009378',
+                    },
+                  }}/>}
                   label="Alaqiq"
                   color="success"
                 />
                 <FormControlLabel
-                  control={<Checkbox />}
+                  control={<Checkbox  sx={{
+                    color: '#3B5E71',
+                    '&.Mui-checked': {
+                      color: '#009378',
+                    },
+                  }} />}
                   label="Quibaa"
                   color="success"
                 />
                 <FormControlLabel
-                  control={<Checkbox />}
+                  control={<Checkbox   sx={{
+                    color: '#3B5E71',
+                    '&.Mui-checked': {
+                      color: '#009378',
+                    },
+                  }}/>}
                   label="Alawali"
                   color="success"
                 />
                 <FormControlLabel
-                  control={<Checkbox />}
+                  control={<Checkbox   sx={{
+                    color: '#3B5E71',
+                    '&.Mui-checked': {
+                      color: '#009378',
+                    },
+                  }}/>}
                   label="Uhud"
                   color="success"
                 />
@@ -212,12 +237,24 @@ export const CompanyInformation = function (props) {
           <img src={mapImage} />
         </Grid>
       </Grid>
-      <Typography>Company image</Typography>
-      <Card>
-        <input type="file" />
+      <Typography variant="h4" component="h4" sx={{fontWeight:700,fontSize:16, marginTop:0}}>Company image</Typography>
+      <Card  sx={{ minWidth: 85 ,marginTop:2 }} className="file-card">
+      <label for="file-upload" className="custom-file-upload">
+      Select file
+</label>
+<input id="file-upload" type="file"/>
+      
       </Card>
-      <button>Next</button>
-      <button className="rating-button">Previous</button>
+      <div className="company-info-btn">
+      <Button variant="contained" color="success" className="next" >
+              Next
+            </Button>
+            <div className="previous">
+            <button className="previous-btn">  Previous</button>
+            </div>
+          
+      </div>
+      
     </StepLayout>
   );
 };
