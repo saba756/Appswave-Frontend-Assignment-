@@ -22,33 +22,45 @@ export const StepForm = function () {
     Step2: {},
   });
 
+  const [steps, setSteps] = React.useState({
+    
+    "panel1": false, "panel2": false, "panel3": false,
+    "panel4": false, "panel5": false, "panel6": false, "panel7": false, "panel8": false
   
-  const handleChange = (steps) => (event, isExpanded) => {
-    if(data.from === steps){
-      setExpanded(isExpanded ? steps : false);
+})
+  
+  const handleChange = (step) => (event, isExpanded) => {
+    if(data.from === step){
+      setExpanded(isExpanded ? step : false);
     }
-  
   };
 
   const ChangeSteps = function (newData) {
+
+    console.log("neew",newData)
     setData({ ...data, ...newData }); 
     setExpanded(newData.from);
+    if(steps[newData.currentPanel] === false){
+      steps[newData.currentPanel] = true
+      setSteps({...steps})
+    }
   };
  
   return (
     <section>
-      <Categorization handleChange={handleChange} expanded={expanded} ChangeSteps={ChangeSteps}  data={data} />
-      <CompanyInformation handleChange={handleChange} expanded={expanded} ChangeSteps={ChangeSteps} data={data}  />
-      <TruckInformation handleChange={handleChange} expanded={expanded}  ChangeSteps={ChangeSteps} data={data} />
-      <ContainerInformation handleChange={handleChange} expanded={expanded} ChangeSteps={ChangeSteps} data={data} />
-      <LaborInformation handleChange={handleChange} expanded={expanded} ChangeSteps={ChangeSteps} data={data}  />
-      <LocationInformation handleChange={handleChange} expanded={expanded} ChangeSteps={ChangeSteps} data={data}  />
-      <RequiredDocuments handleChange={handleChange} expanded={expanded}  ChangeSteps={ChangeSteps} data={data } />
+      <Categorization handleChange={handleChange} expanded={expanded} ChangeSteps={ChangeSteps}  data={data} steps={steps} />
+      <CompanyInformation handleChange={handleChange} expanded={expanded} ChangeSteps={ChangeSteps} data={data} steps={steps}  />
+      <TruckInformation handleChange={handleChange} expanded={expanded}  ChangeSteps={ChangeSteps} data={data}  steps={steps}/>
+      <ContainerInformation handleChange={handleChange} expanded={expanded} ChangeSteps={ChangeSteps} data={data} steps={steps} />
+      <LaborInformation handleChange={handleChange} expanded={expanded} ChangeSteps={ChangeSteps} data={data} steps={steps}  />
+      <LocationInformation handleChange={handleChange} expanded={expanded} ChangeSteps={ChangeSteps} data={data} steps={steps}  />
+      <RequiredDocuments handleChange={handleChange} expanded={expanded}  ChangeSteps={ChangeSteps} data={data } steps={steps}/>
       <DeclarationsAndCommitments
         handleChange={handleChange}
         expanded={expanded}
         data={data}
         ChangeSteps={ChangeSteps}
+        steps={steps}
       />
     </section>
   );

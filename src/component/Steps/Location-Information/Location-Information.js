@@ -1,7 +1,14 @@
 import React from "react";
 import { StepLayout } from "../../StepForm-Layout/StepForm-Layout";
-
+import { Typography } from '@mui/material';
+import Button from "@mui/material/Button";
 function LocationInformation(props)  {
+  const next =() =>{
+    props.ChangeSteps({
+      from: "panel7",
+      to: "panel8",
+    });
+  }
   return (
     <StepLayout
       panelNo="panel6"
@@ -11,9 +18,21 @@ function LocationInformation(props)  {
       ChangeSteps={props.ChangeSteps}
       data={props.data}
       num="6"
+      steps={props.steps}
     >
       
-      Content Here
+      <Typography variant="h6" component="h6">
+      LocationInformation here
+</Typography>
+<div className="company-info-btn">
+      <Button variant="contained" color="success" className="next" onClick={next} >
+              Next
+            </Button>
+            <div className="previous">
+            <button className="previous-btn">  Previous</button>
+            </div>
+          
+      </div>
     </StepLayout>
   );
 };

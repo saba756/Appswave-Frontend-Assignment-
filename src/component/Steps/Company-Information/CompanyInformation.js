@@ -25,7 +25,13 @@ function CompanyInformation(props)  {
       to: "panel4",
     });
   }
-
+  const previousButton =(event)=>{
+    event.preventDefault();
+    props.ChangeSteps({
+      from: "panel1",
+      to: "panel2",
+    });
+  }
   return (
     <StepLayout
       panelNo="panel2"
@@ -34,6 +40,7 @@ function CompanyInformation(props)  {
       expanded={props.expanded}
       ChangeSteps={props.ChangeSteps}
       data={props.data}
+      steps={props.steps}
       num="2"
     >
       <Typography variant="body1"  className="categorybody" sx={{marginLeft:4}}>Please Enter your company information</Typography>
@@ -246,11 +253,11 @@ function CompanyInformation(props)  {
     <input id="file-upload" type="file"/>
       </Card>
       <div className="company-info-btn">
-      <Button variant="contained" color="success" className="next" onClick={next} >
+    <Button variant="contained" color="success" className="next" onClick={next} >
               Next
             </Button>
-            <div className="previous">
-            <button className="previous-btn">  Previous</button>
+            <div className="previous">  
+            <button className="previous-btn" type="button"    onClick={previousButton}>  Previous</button>
             </div>
           
       </div>

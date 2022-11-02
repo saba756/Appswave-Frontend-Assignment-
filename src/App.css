@@ -211,18 +211,21 @@ font-weight: 600;
 font-size: 16px;
 line-height: 28px;
 }
-.previous-btn{
+
+ .previous-btn {
   color: #009378;
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 28px;
-text-align: center;
-border: 1px solid #009378;
-border-radius: 10px;
-background-color: #FFFFFF;
-padding: 0px 24px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  border: 1px solid #009378;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 6px 64px;
+  cursor: pointer;
 }
+
 .previous{
   margin-top: 27px;
 }

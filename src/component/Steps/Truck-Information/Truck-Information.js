@@ -19,6 +19,7 @@ function TruckInformation(props)  {
       ChangeSteps={props.ChangeSteps}
       data={props.data}
       num="3"
+      steps={props.steps}
     >
     <Typography variant="h6" component="h6">
     TruckInformation here

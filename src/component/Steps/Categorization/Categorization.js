@@ -28,6 +28,7 @@ function Categorization(props)  {
       ChangeSteps={props.ChangeSteps}
       data={props.data}
       num="1"
+      steps={props.steps}
     >
       <Box sx={{ flexGrow: 1 }}>
 
@@ -45,6 +46,7 @@ function Categorization(props)  {
           from: "panel2",
           to: "panel3",
            category: values,
+           currentPanel: "panel1",
         });
       console.log("values",values)
         
