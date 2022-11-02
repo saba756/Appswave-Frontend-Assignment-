@@ -1,7 +1,7 @@
 
 import './App.css';
-import StepForm  from './component/StepForm/StepForm'
-import Header from './component/Header/Header'
+import StepForm  from './components/StepForm/StepForm'
+import Header from './components/Header/Header'
 function App() {
   return (
 

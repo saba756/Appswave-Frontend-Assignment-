@@ -65,9 +65,6 @@ function CompanyInformation(props)  {
         </div>
           {/* <Typography>Nahdi Pharmacy</Typography> */}
           <Typography variant="h4" component="h4" sx={{fontWeight:700,fontSize:16, marginBottom:1}}>Manager name</Typography>
-
-  
-  
           <div className="tag">
             <span className="tag-element">Ahmed Emad</span>
             <span className="tag-element">Ahmed Emad</span>
