@@ -3,40 +3,42 @@
   padding-right: 24px;
 
 }
-.header{
+
+.header {
   display: flex;
   min-width: 100%;
-
 }
 
-
-
-.test{
+.test {
   min-width: 25%;
 
 }
-.text{
+
+.text {
   font-weight: bold;
 }
-.breadcrumb{
+
+.breadcrumb {
   font-weight: 600;
-  color: #195CCD; ;
+  color: #195CCD;
+  ;
 }
 
-.rateButton{
+.rateButton {
 
-color: #009378;
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 28px;
-text-align: center;
-border: 1px solid #009378;
-border-radius: 10px;
-background-color: #FFFFFF;
-padding: 6px 64px;
+  color: #009378;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  border: 1px solid #009378;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  padding: 6px 64px;
 }
-.MuiButtonBase-root.MuiButton-root.MuiButton-contained{
+
+.MuiButtonBase-root.MuiButton-root.MuiButton-contained {
   margin-top: 23px;
   color: #ffff;
   font-style: normal;
@@ -49,11 +51,11 @@ padding: 6px 64px;
   padding: 6px 64px;
 }
 
-.header-wrapper{
+.header-wrapper {
   display: flex;
-    align-content: center;
-    justify-content: space-between;
-    align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .stepper {
@@ -92,8 +94,8 @@ padding: 6px 64px;
 
 }
 
-.MuiTypography-root.MuiTypography-body1.MuiFormControlLabel-label.css-ahj2mt-MuiTypography-root{
-line-height: 18px;
+.MuiTypography-root.MuiTypography-body1.MuiFormControlLabel-label.css-ahj2mt-MuiTypography-root {
+  line-height: 18px;
 }
 
 .MuiFormControlLabel-label.css-ahj2mt-MuiTypography-root {
@@ -101,118 +103,135 @@ line-height: 18px;
   color: #162d39;
 }
 
-.textField{
-  background: #F7F7F7;;
+.textField {
+  background: #F7F7F7;
+  ;
 }
 
-.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase{
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase {
   height: 36px;
 }
-.textFieldInput{
+
+.textFieldInput {
   position: relative;
 
 }
-.info-icon{
+
+.info-icon {
   position: absolute;
   top: -21px;
   left: 309px;
 }
-.input-text{
-  width:330px;
+
+.input-text {
+  width: 330px;
   height: 36px;
   background: #F7F7F7;
   box-shadow: 0px 4px 16px rgba(6, 26, 35, 0.1);
-margin-top: 6px;
+  margin-top: 6px;
 }
-input[type="text"]{
+
+input[type="text"] {
   border: none;
   border-color: transparent;
 }
-.cr-number{
+
+.cr-number {
   margin-top: 12px;
 }
-.border-line{
-  width:330px;
+
+.border-line {
+  width: 330px;
   height: 36px;
   border-top: 2px solid #577485
 }
-.text-label{
-  
-}
-.label{
-  width:330px;
+
+.text-label {}
+
+.label {
+  width: 330px;
   height: 36px;
   border-top: 1px solid #577485;
   margin-top: 4px;
 }
 
-.input-label{
-margin-left: 11px;
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 28px;
-color: #577485;
+.input-label {
+  margin-left: 11px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #577485;
 }
-.cr-issue{
+
+.cr-issue {
   display: flex;
-  gap:250px;
-  margin-top:12px;
-}
-.cr-input{
-  display: flex;
-  gap:28px
-}
-.margin{
-  margin-left: -31px;
-}
-.license{
+  gap: 250px;
   margin-top: 12px;
 }
-.cr-license{
+
+.cr-input {
   display: flex;
-  gap:118px
+  gap: 28px
 }
-.licenses-date{
+
+.margin {
+  margin-left: -31px;
+}
+
+.license {
+  margin-top: 12px;
+}
+
+.cr-license {
   display: flex;
-  gap:138px
+  gap: 118px
 }
+
+.licenses-date {
+  display: flex;
+  gap: 138px
+}
+
 input[type="file"] {
   display: none;
 }
+
 .custom-file-upload {
   border: 1px solid #ccc;
   display: inline-block;
   padding: 6px 12px;
   cursor: pointer;
   background: #009378;
-border-radius: 10px;
-color: #FFFFFF;
-padding: 0px 24px;
-font-weight: 600;
-font-size: 16px;
-line-height: 28px;
-margin-top: 20px;
-    margin-left: 22px;
-    margin-bottom: 12px
+  border-radius: 10px;
+  color: #FFFFFF;
+  padding: 0px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  margin-top: 20px;
+  margin-left: 22px;
+  margin-bottom: 12px
 }
-.company-info-btn{
+
+.company-info-btn {
   display: flex;
   gap: 24px;
   margin-top: 12px;
 }
-.MuiButtonBase-root.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary{
+
+.MuiButtonBase-root.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary {
   border: 1px solid #ccc;
   display: inline-block;
   border-radius: 10px;
-color: #FFFFFF;
-padding: 0px 24px;
-font-weight: 600;
-font-size: 16px;
-line-height: 28px;
+  color: #FFFFFF;
+  padding: 0px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
 }
 
- .previous-btn {
+.previous-btn {
   color: #009378;
   font-style: normal;
   font-weight: 600;
@@ -226,42 +245,45 @@ line-height: 28px;
   cursor: pointer;
 }
 
-.previous{
+.previous {
   margin-top: 27px;
 }
-.tag-element{
-  display: inline; 
+
+.tag-element {
+  display: inline;
   width: 100px;
   height: 100px;
   padding: 0px 10px;
   background: #E8ECEF;
-border-radius: 4px;
-font-weight: 400;
-font-size: 15px;
-line-height: 24px;
-color: #3B5E71;
-margin-left: 8px;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #3B5E71;
+  margin-left: 8px;
 
 }
-.tag{
+
+.tag {
   border-top: 1px solid #577485;
-  padding-top:6px
+  padding-top: 6px
 }
-.label-margin-issue{
-margin-left: 5px;
+
+.label-margin-issue {
+  margin-left: 5px;
 }
-.file-card{
+
+.file-card {
   background: #FAFAFA;
-  /* color/neutral/100 */
-  
   border: 1px solid #BECED6;
   border-radius: 4px;
 }
 
-/* Side by side css */
 
-
-.rowC{display:flex; flex-direction:row;}
+.rowC {
+  display: flex;
+  flex-direction: row;
+}
 
 .numberCircle {
   border-radius: 50%;
@@ -282,19 +304,22 @@ margin-left: 5px;
   height: 10px;
   padding: 8px;
   margin-right: 8px;
-  color: #166EE0;;
+  color: #166EE0;
+  ;
   background: #fff;
-  border: 1px solid  #166EE0;;
+  border: 1px solid #166EE0;
+  ;
   text-align: center;
   font: 10px Arial, sans-serif;
   background: #E2F1FF
 }
 
-.success-icon{
+.success-icon {
   width: 30px;
-    height: 30px;
-    margin-right: 8px;
+  height: 30px;
+  margin-right: 8px;
 }
-.MuiAccordionSummary-content.css-1betqn-MuiAccordionSummary-content{
-align-items:center;
+
+.MuiAccordionSummary-content.css-1betqn-MuiAccordionSummary-content {
+  align-items: center;
 }
