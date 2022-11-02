@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { StepLayout } from "../../StepForm-Layout/StepForm-Layout";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
@@ -17,8 +17,9 @@ import FormLabel from "@mui/material/FormLabel";
 import FormGroup from "@mui/material/FormGroup";
 import Checkbox from "@mui/material/Checkbox";
 import { Formik, Field, Form } from 'formik';
-function Categorization(props) {
 
+function Categorization(props) {
+const [selectedValues, setSelectedValues] = useState('')
   return (
     <StepLayout
       panelNo="panel1"
@@ -29,6 +30,7 @@ function Categorization(props) {
       data={props.data}
       num="1"
       steps={props.steps}
+      selectedValues ={selectedValues}
     >
       <Box sx={{ flexGrow: 1 }}>
 
@@ -47,9 +49,31 @@ function Categorization(props) {
               to: "panel3",
               category: values,
               currentPanel: "panel1",
+              values: values
             });
             console.log("values", values)
-
+            const keys = Object.keys(values)
+            var waterType = 0;
+            var categoryValues =""
+            keys.forEach(key => {
+              console.log(values[key])
+              if (values[key] != '' ){
+                if (values[key] == 'commercialActivities' || 
+                values[key] == 'constructionWaste' || 
+                values[key] == 'sewageWater' ||
+                values[key] == 'specialMedicalWaste' ||
+                values[key] == 'treatedMedicalWaste')
+                waterType = waterType + 1;
+                else {
+                  categoryValues = categoryValues + values[key]
+                }
+              }
+            });
+              
+              if (waterType > 0){
+                categoryValues = categoryValues + " , "+ waterType +" wastes types"
+              }
+              setSelectedValues(categoryValues)
           }}
         >
           {({ values, setFieldValue }) => (

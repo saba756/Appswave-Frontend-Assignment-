@@ -29,9 +29,9 @@ export const StepLayout = function (props) {
                     </div>
 
         <Typography sx={{ width: "33%" , flexShrink: 0  }}>
-          {props.heading}
+          {props.heading} 
         </Typography>
-
+        <p className="selectedValue">{props.selectedValues}</p>
       </AccordionSummary>
       <AccordionDetails>{props.children}</AccordionDetails>
     </Accordion>

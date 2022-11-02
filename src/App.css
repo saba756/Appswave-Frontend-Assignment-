@@ -205,7 +205,7 @@ input[type="file"] {
   background: #009378;
   border-radius: 10px;
   color: #FFFFFF;
-  padding: 0px 24px;
+  padding: 5px 30px;
   font-weight: 600;
   font-size: 16px;
   line-height: 28px;
@@ -322,4 +322,11 @@ input[type="file"] {
 
 .MuiAccordionSummary-content.css-1betqn-MuiAccordionSummary-content {
   align-items: center;
+}
+.selectedValue{
+  color: #3B5E71;
+  font-weight: 400;
+font-size: 16px;
+line-height: 28px;
+margin-left: -182px
 }
